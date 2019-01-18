@@ -1,0 +1,6 @@
+<%= form_for @user, url: "/users" , html: { method: :post } do |f| %>
+
+  <p>キーワード: <%= f.text_field :word %></p>
+  <p>意味: <%= f.text_field :mean %></p>
+  <%= f.submit(["登録"]) %>
+<% end %>

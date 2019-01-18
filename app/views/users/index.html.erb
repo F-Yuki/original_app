@@ -1,0 +1,8 @@
+<%= link_to "登録画面へ", "/users/new" %>
+<% @users.each do |user| %>
+  <p>
+    <%= simple_format user.word %><%= simple_format user.mean %>
+    <%= link_to '削除', "/users/#{user.id}", method: :delete, data: {confirm: "削除しますか?"}  %>
+    <%= link_to '編集', "/users/#{user.id}/edit", method: :get %> 
+  </p>
+<% end %>
